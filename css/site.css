@@ -224,6 +224,14 @@ h3 { font-size: 1.25rem; margin-bottom: 0.4rem; }
 .trust article {
   padding: 1.25rem 1.1rem;
   border-right: 1px solid var(--line);
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.trust article:hover {
+  position: relative;
+  z-index: 1;
+  background: #f3fbfb;
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 1px #7fd4d4, 0 0 22px rgba(12, 127, 134, 0.38);
 }
 .trust article:last-child { border-right: 0; }
 .trust strong {
@@ -272,6 +280,11 @@ h3 { font-size: 1.25rem; margin-bottom: 0.4rem; }
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--line);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.shot:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 2px #7fd4d4, 0 12px 32px rgba(12, 127, 134, 0.4);
 }
 .shot button {
   display: block;
@@ -281,7 +294,8 @@ h3 { font-size: 1.25rem; margin-bottom: 0.4rem; }
   background: none;
   cursor: zoom-in;
 }
-.shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform 0.35s ease; }
+.shot:hover img { transform: scale(1.04); }
 .shot figcaption { padding: 0.75rem 0.9rem 0.95rem; color: var(--ink); font-weight: 600; }
 
 .band {
@@ -423,6 +437,23 @@ dialog p { color: var(--white); margin: 0; padding: 0.8rem 1rem 1rem; }
   font-size: 0.92rem;
 }
 .legal p { margin: 0; }
+
+.whatsapp-float {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 30;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 24px rgba(11, 46, 69, 0.28);
+}
+.whatsapp-float:hover { background: #1ebe5d; color: #ffffff; }
+.whatsapp-float svg { width: 32px; height: 32px; display: block; }
 
 .page-hero { padding: 3.2rem 0 1rem; background: var(--paper); }
 .missing { padding: 4rem 0 5rem; text-align: center; }
